@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:gogymsync/start_session.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:gogymsync/presentation/home/home_page.dart';
+import 'core/theme/app_theme.dart';
+import 'core/di/injection_container.dart' as sl;
+import 'firebase_options.dart';
 
-import 'join_session.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  sl.setupLocator();
+
   runApp(const MyApp());
 }
 
@@ -13,65 +23,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const StartSession()),
-                );
-              },
-              child: const SizedBox(
-                width: 120,
-                height: 50,
-                child: Center(child: Text("Start session")),
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const JoinSession()),
-                );
-              },
-              child: const SizedBox(
-                width: 120,
-                height: 50,
-                child: Center(child: Text("Join session")),
-              ),
-            ),
-          ],
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'GoGymSync',
+      themeMode: ThemeMode.dark,
+      darkTheme: AppTheme.darkTheme,
+      home: const HomePage(),
     );
   }
 }
