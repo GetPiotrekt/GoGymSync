@@ -1,6 +1,4 @@
 // Abstrakt
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 abstract class SessionRemoteDataSource {
   Future<void> joinSession(String code, String userId, String userName);
   Future<bool> checkSessionExists(String code);
