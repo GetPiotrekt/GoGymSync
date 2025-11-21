@@ -1,8 +1,6 @@
 ## To repozytorium zawiera dokumentację również w języku polskim, która znajduje się poniżej.
 
-# EN
-
-GoGymSync – Shared Training Session Module
+# EN / GoGymSync – Shared Training Session Module
 
 This module is responsible for handling shared training sessions in the GoGymSync / GoGymSimple application.
 It allows creating sessions, joining users, and sharing data in real-time.
@@ -82,7 +80,7 @@ It allows creating sessions, joining users, and sharing data in real-time.
 	6.	Portability
 	•	App runs on Android, iOS, Web, Windows, macOS (Flutter).
 
-🧩 Architecture
+# 🧩 Architecture
 
 The project follows Clean Architecture (Layer First):
 ## presentation → domain → data
@@ -104,9 +102,9 @@ The project follows Clean Architecture (Layer First):
 	•	Trainer–participant mode
 	•	Statistics and analytics after the session
 
-# PL
+**────────────────────────**
 
-GoGymSync – moduł wspólnych sesji treningowych
+# PL / GoGymSync – moduł wspólnych sesji treningowych
 
 Moduł odpowiedzialny za obsługę wspólnej sesji treningowej w aplikacji GoGymSync / GoGymSimple.
 Pozwala tworzyć sesje, dołączać użytkowników i współdzielić informacje w czasie rzeczywistym.
@@ -201,8 +199,8 @@ Projekt oparty jest o Clean Architecture (Layer First):
 	•	Firebase Firestore
 	•	GetIt (DI)
 	•	Streamy (real-time updates)
-
-  # 📡 Plany rozwoju
+	
+# 📡 Plany rozwoju
 	•	Udostępnianie wyników sesji (QR / link)
 	•	Chat w lobby
 	•	Integracja z treningami użytkowników
