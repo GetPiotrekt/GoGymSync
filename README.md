@@ -95,6 +95,9 @@ It allows creating sessions, joining users, and sharing data in real-time.
 # 🧩 Architecture
 
 The project follows Clean Architecture (Layer First):
+
+<img width="407" height="430" alt="Image" src="https://github.com/user-attachments/assets/cb63525f-d317-4d80-914d-698d5ffa13bb" />
+
 ## presentation → domain → data
 	•	data – Firebase Remote Data Source + repository implementations
 	•	domain – use cases + entities + repository abstractions
@@ -211,6 +214,8 @@ Pozwala tworzyć sesje, dołączać użytkowników i współdzielić informacje 
 # 🧩 Architektura
 
 Projekt oparty jest o Clean Architecture (Layer First): 
+
+<img width="407" height="430" alt="Image" src="https://github.com/user-attachments/assets/cb63525f-d317-4d80-914d-698d5ffa13bb" />
 
 ## presentation  →  domain  →  data
 	•	data – Firebase Remote Data Source + implementacje repo
